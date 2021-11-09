@@ -8,12 +8,12 @@ import Messages from '../Messages/Messages.js';
 import './Chat.css';
 
 let socket;
+const ENDPOINT = 'https://besties-chat-application.herokuapp.com/';
 const Chat = ({ location }) => {
     const [ name, setName ] = useState('');
     const [ room, setRoom ] = useState('');
     const [ message, setMessage ] = useState('');
     const [ messages, setMessages ] = useState([]);
-    const ENDPOINT = 'localhost:5000';
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
     
