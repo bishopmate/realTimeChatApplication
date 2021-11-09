@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
-
+import Messages from '../Messages/Messages.js';
 import './Chat.css';
 
 let socket;
@@ -53,6 +53,7 @@ const Chat = ({ location }) => {
         <div class = "outerContainer">
             <div class = "container">
                 <InfoBar room = { room } />
+                <Messages messages = {messages} name = {name}/>
                 <Input message = { message } setMessage = { setMessage } sendMessage = { sendMessage} />
             </div>
         </div>
